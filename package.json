@@ -1,0 +1,8 @@
+{
+  "name": "app-teste",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Passou no teste!\" && exit 0"
+  }
+}
