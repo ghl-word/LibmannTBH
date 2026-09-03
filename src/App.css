@@ -1,0 +1,196 @@
+.app {
+  display: flex;
+  height: 100vh;
+  background-color: var(--color-body-bg);
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 260px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* KPI Row */
+.kpi-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 0 40px;
+  padding-bottom: 20px;
+}
+
+/* Charts Grid */
+.charts-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 20px;
+  padding: 0 40px;
+  padding-bottom: 20px;
+}
+
+/* Content Section */
+.content-section {
+  padding: 0 40px;
+  padding-bottom: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 1440px) {
+  .kpi-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1024px) {
+  .main-content {
+    margin-left: 260px;
+  }
+
+  .kpi-row {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 24px;
+    gap: 16px;
+  }
+
+  .charts-grid {
+    grid-template-columns: 1fr;
+    padding: 0 24px;
+    gap: 16px;
+  }
+
+  .content-section {
+    padding: 0 24px 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+  }
+
+  .kpi-row {
+    grid-template-columns: 1fr;
+    padding: 0 16px;
+    padding-top: 16px;
+  }
+
+  .charts-grid {
+    grid-template-columns: 1fr;
+    padding: 0 16px;
+  }
+
+  .content-section {
+    padding: 0 16px 16px;
+  }
+}
+
+/* Scrollbar styling */
+.main-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.main-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+  background: var(--color-gray-300);
+  border-radius: 4px;
+}
+
+.main-content::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gray-400);
+}
+
+/* =========================================
+   MELHORIAS NOS INPUTS E SELECTS
+========================================= */
+.custom-input, .custom-select {
+  width: 100%;
+  padding: 14px 16px; 
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px; 
+  outline: none;
+  background-color: #f9fafb;
+  transition: all 0.2s;
+  cursor: text;
+}
+
+.custom-select {
+  cursor: pointer;
+  appearance: none; /* Remove a setinha feia padrão em alguns navegadores */
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%234b5563%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px top 50%;
+  background-size: 12px auto;
+  padding-right: 40px;
+}
+
+.custom-input:focus, .custom-select:focus {
+  border-color: #3b82f6; 
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1); /* Efeito de brilho azul */
+}
+
+/* =========================================
+   SCROLLBAR CUSTOMIZADO PARA A BUSCA
+========================================= */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  border-radius: 8px;
+}
+ 
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1; 
+  border-radius: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8; 
+}
+
+/* =========================================
+   BOTÃO DE MODO MANUAL / ESTOQUE
+========================================= */
+.btn-toggle-manual {
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+
+.btn-toggle-manual:hover {
+  background: #1d4ed8;
+  color: white;
+}
+
+.btn-close-modal {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: #6b7280;
+  transition: color 0.2s;
+}
+
+.btn-close-modal:hover {
+  color: #ef4444;
+}

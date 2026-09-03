@@ -1,0 +1,92 @@
+.kpi-card {
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+  flex: 1;
+  min-width: 240px;
+}
+
+.kpi-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-gray-300);
+}
+
+.kpi-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.kpi-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.kpi-icon {
+  width: 32px;
+  height: 32px;
+  background-color: var(--color-gray-50);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-secondary);
+  flex-shrink: 0;
+}
+
+.kpi-value {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  line-height: 1;
+}
+
+.kpi-footer {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.kpi-change {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.kpi-change.positive {
+  color: var(--color-success);
+}
+
+.kpi-change.negative {
+  color: var(--color-danger);
+}
+
+.kpi-period {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 1024px) {
+  .kpi-card {
+    min-width: 200px;
+    padding: 16px;
+  }
+
+  .kpi-value {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .kpi-card {
+    min-width: 100%;
+  }
+}

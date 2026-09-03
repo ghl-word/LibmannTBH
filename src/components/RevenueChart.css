@@ -1,0 +1,107 @@
+.revenue-chart {
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex: 1.5;
+  box-shadow: var(--shadow-sm);
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.chart-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.period-selector {
+  display: flex;
+  gap: 8px;
+  background-color: var(--color-gray-100);
+  padding: 2px;
+  border-radius: var(--radius-md);
+}
+
+.period-btn {
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  background-color: transparent;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.period-btn:hover {
+  color: var(--color-text-primary);
+}
+
+.period-btn.active {
+  background-color: white;
+  color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.chart-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.chart-visual svg {
+  width: 100%;
+  height: auto;
+  min-height: 200px;
+}
+
+.chart-labels {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.chart-label {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  text-align: center;
+  flex: 1;
+}
+
+@media (max-width: 1024px) {
+  .revenue-chart {
+    padding: 16px;
+  }
+
+  .chart-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .revenue-chart {
+    flex: 1;
+  }
+
+  .period-selector {
+    width: 100%;
+  }
+
+  .period-btn {
+    flex: 1;
+    padding: 8px;
+    font-size: 12px;
+  }
+}

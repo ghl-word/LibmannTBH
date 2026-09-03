@@ -1,0 +1,507 @@
+/* =========================================
+   CONTAINER PRINCIPAL
+========================================= */
+.clientes-container {
+  padding: 32px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* =========================================
+   KPIs (CAIXAS SUPERIORES)
+========================================= */
+.clientes-kpi-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.cliente-kpi-card {
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: var(--shadow-sm);
+}
+
+.kpi-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.kpi-header h4 {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  margin: 0;
+}
+
+.kpi-icon-wrapper {
+  color: var(--color-text-secondary);
+}
+
+.kpi-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.kpi-body h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.kpi-body span {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.kpi-trend {
+  color: var(--color-success);
+  font-weight: 500;
+}
+
+/* =========================================
+   ÁREA DE BUSCA E FILTROS
+========================================= */
+.search-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.search-header h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0 0 4px 0;
+}
+
+.search-header p {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.search-bar-wrapper {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.search-input-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 10px 16px;
+  gap: 12px;
+  transition: all 0.2s;
+  box-shadow: var(--shadow-sm);
+}
+
+.search-input-container:focus-within {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 1px var(--color-primary);
+}
+
+.search-input-container input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  color: var(--color-text-primary);
+}
+
+.search-input-container input::placeholder {
+  color: var(--color-gray-400);
+}
+
+.btn-filtros {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+  padding: 10px 16px;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: background-color 0.2s;
+}
+
+.btn-filtros:hover {
+  background-color: var(--color-gray-50);
+}
+
+.badge-ativo {
+  background-color: var(--color-gray-100);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+.btn-novo-cliente {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 10px 16px;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.btn-novo-cliente:hover {
+  background-color: var(--color-secondary);
+}
+
+/* =========================================
+   LISTA DE CLIENTES
+========================================= */
+.clientes-list-container {
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 0 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.list-header {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
+.list-header input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.cliente-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.cliente-row:last-child {
+  border-bottom: none;
+}
+
+.cliente-info-left {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.cliente-info-left input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin-top: 4px;
+  cursor: pointer;
+}
+
+.cliente-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cliente-name-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cliente-name-area h4 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.status-badge {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--color-success);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.cliente-sub-info {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cliente-sub-info span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.cliente-extra-details {
+  font-size: 12px;
+  color: var(--color-gray-400);
+  margin-top: 2px;
+}
+
+.cliente-actions-right {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.action-icons {
+  display: flex;
+  gap: 16px;
+  color: var(--color-gray-400);
+}
+
+.action-icons button {
+  color: inherit;
+  transition: color 0.2s;
+}
+
+.action-icons button:hover {
+  color: var(--color-primary);
+}
+
+.cliente-value {
+  text-align: right;
+  min-width: 100px;
+}
+
+.cliente-value h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0 0 2px 0;
+}
+
+.cliente-value p {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* =========================================
+   MODAL DE NOVO CLIENTE (Com Busca de CNPJ)
+========================================= */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: var(--color-card-bg);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  width: 100%;
+  max-width: 650px;
+  box-shadow: var(--shadow-lg);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.modal-header-top h2 {
+  margin: 0;
+  font-size: 24px;
+  color: var(--color-text-primary);
+}
+
+.section-subtitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 8px;
+}
+
+.section-divider {
+  height: 1px;
+  background-color: var(--color-border);
+  margin-bottom: 24px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 16px;
+  margin-bottom: 32px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-gray-600);
+}
+
+.form-group input {
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+  color: var(--color-text-primary);
+}
+
+.form-group input:focus {
+  border-color: var(--color-primary);
+}
+
+.input-with-button {
+  display: flex;
+  gap: 8px;
+}
+
+.input-with-button input {
+  flex: 1;
+}
+
+.btn-buscar-cnpj {
+  background-color: var(--color-gray-100);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-buscar-cnpj:hover {
+  background-color: var(--color-gray-200);
+}
+
+.input-with-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.input-with-checkbox input[type="text"] {
+  flex: 1;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.btn-cancelar {
+  padding: 10px 16px;
+  background-color: var(--color-gray-100);
+  color: var(--color-gray-700);
+  border-radius: var(--radius-md);
+  font-weight: 500;
+}
+
+.btn-cancelar:hover {
+  background-color: var(--color-gray-200);
+}
+
+.btn-salvar {
+  padding: 10px 16px;
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: var(--radius-md);
+  font-weight: 500;
+}
+
+.btn-salvar:hover {
+  background-color: var(--color-secondary);
+}
+
+/* =========================================
+   RESPONSIVIDADE (Telas menores)
+========================================= */
+@media (max-width: 1024px) {
+  .clientes-kpi-row {
+    grid-template-columns: 1fr;
+  }
+  .search-bar-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .cliente-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .cliente-actions-right {
+    width: 100%;
+    justify-content: space-between;
+    padding-left: 32px;
+  }
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
