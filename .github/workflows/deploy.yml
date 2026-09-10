@@ -37,23 +37,6 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
-            mkdir -p ~/meu-app
-            cd ~/meu-app
-
-            echo "DOCKER_USERNAME=${{ secrets.DOCKER_USERNAME }}" > .env
-            
-            cat << 'EOF' > docker-compose.yml
-            services:
-              api-teste:
-                image: ${DOCKER_USERNAME}/app-teste:latest
-                ports:
-                  - "80:3000"
-                restart: always
-            EOF
-            
-            # Limpa qualquer container antigo que esteja travando a porta 80
-            sudo docker rm -f $(docker ps -aq) || true
-            
-            # Baixa a imagem nova e sobe o projeto
+            sudo docker rm -f api-teste || true
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/app-teste:latest
-            sudo docker compose up -d
+            sudo docker run -d --name api-teste -p 80:3000 --restart always ${{ secrets.DOCKER_USERNAME }}/app-teste:latest
