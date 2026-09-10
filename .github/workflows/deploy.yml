@@ -13,7 +13,7 @@ jobs:
         with: { node-version: '20' }
       - run: npm install
       - run: npm test
-      
+
   build-deploy:
     needs: test
     runs-on: ubuntu-latest
@@ -52,8 +52,8 @@ jobs:
             EOF
             
             # Limpa qualquer container antigo que esteja travando a porta 80
-            docker rm -f $(docker ps -aq) || true
+            sudo docker rm -f $(docker ps -aq) || true
             
             # Baixa a imagem nova e sobe o projeto
-            docker pull ${{ secrets.DOCKER_USERNAME }}/app-teste:latest
-            docker compose up -d
+            sudo docker pull ${{ secrets.DOCKER_USERNAME }}/app-teste:latest
+            sudo docker compose up -d
