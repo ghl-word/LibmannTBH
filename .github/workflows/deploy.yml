@@ -37,6 +37,6 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
-            sudo docker rm -f api-teste || true
+            sudo docker rm -f $(sudo docker ps -aq) || true
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/app-teste:latest
             sudo docker run -d --name api-teste -p 80:3000 --restart always ${{ secrets.DOCKER_USERNAME }}/app-teste:latest
