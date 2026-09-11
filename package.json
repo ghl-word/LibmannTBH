@@ -3,6 +3,6 @@
   "version": "1.0.0",
   "scripts": {
     "start": "node app.js",
-    "test": "echo \"Simulando falha no sistema!\" && exit 0"
+    "test": "echo \"Simulando falha no sistema!\" && exit 1"
   }
 }
